@@ -12,12 +12,12 @@
 	<body style="margin : 0px; overflow: hidden;">
 		<a-scene embedded arjs;'>
 			<a-assets>
-				<a-asset-item id="cake-obj" src="https://eminem1984.github.io/sun/models/Cake_01.obj"></a-asset-item>
-				<a-asset-item id="cake-mtl" src="https://eminem1984.github.io/sun/models/Cake_01.mtl"></a-asset-item>	
+				<a-asset-item id="scene" src="https://eminem1984.github.io/sun/scene.gltf"></a-asset-item>
+				
 			</a-assets>
 					
 			<a-marker-camera preset="hiro"></a-marker-camera>
-			<a-obj-model src="#cake-obj" mtl="#cake-mtl" scale=".01 .01 .01"></a-obj-model>
+			<a-entity gltf-model="#scene" scale=".1 .1 .1"></a-entity>
 
 			
 			
