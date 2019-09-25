@@ -1,0 +1,45 @@
+<!doctype HTML>
+
+<html>
+	<head>
+		<title>
+			Happy Birthday to Emily! 
+		</title>
+		<script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+		<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+		<script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+		<script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+		
+	</head>
+	<body style="margin : 0px; overflow: hidden;">
+		<a-scene embedded arjs;'>
+			<a-assets>
+				<a-asset-item id="scene" src="https://eminem1984.github.io/sun/scene.gltf"></a-asset-item>
+				<a-asset-item id="candle" src="https://eminem1984.github.io/sun/birthday_candle/scene.gltf"></a-asset-item>
+				<a-asset-item id="flame" src="https://eminem1984.github.io/sun/flame_animation/scene.gltf"></a-asset-item>
+				<a-asset-item id="flame1" src="https://eminem1984.github.io/sun/flame_animation/scene.gltf"></a-asset-item>
+				<a-asset-item id="flame2" src="https://eminem1984.github.io/sun/flame_animation/scene.gltf"></a-asset-item>
+				<a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+				
+			   <audio id="bday" src="https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/bday.mp3" autoplay
+      preload></audio>
+					
+			</a-assets>
+
+
+			
+			
+			<a-entity gltf-model="#scene" position="-0.097 1.402 -2.98" scale="0.002 0.002 0.002" rotation="14.299999999999997 0 0.17" sound="src: url(https://cdn.rawgit.com/HackyRoot/A-Frame-Examples/c6a977a7/Happy_Birthday/assets/bday.mp3); autoplay: true; loop: true;"></a-entity>
+			<a-entity gltf-model="#candle" position="-0.255 1.593 -2.805" scale="0.1 0.1 0.1" rotation="14.299999999999997 0 0.17"></a-entity>
+			<a-entity gltf-model="#candle" position="-0.097 1.642 -2.98" scale="0.1 0.1 0.1" rotation="14.299999999999997 0 0.17"></a-entity>
+			<a-entity gltf-model="#candle" position="0.045 1.597 -2.808" scale="0.1 0.1 0.1" rotation="14.299999999999997 0 0.17"></a-entity>
+			<a-entity gltf-model="#flame" position="0.044 1.875 -2.754" scale="0.03 0.03 0.03" rotation="14.3 0 0.17" shadow="" material="opacity: 2;"></a-entity>
+			<a-entity gltf-model="#flame1" position="-0.256 1.875 -2.734" scale="0.03 0.03 0.03" rotation="14.3 0 0.17" shadow="" material="opacity:2"></a-entity>
+			<a-entity gltf-model="#flame2" position="-0.1 1.913 -2.912" scale="0.03 0.03 0.03" rotation="14.3 0 0.17" shadow="" material="opacity:2"></a-entity>
+			<a-entity position="-0.097 3 -2.98" particle-system="preset: default" particle-system="color: #FDF5E6"></a-entity>
+			
+            <a-entity position="-2.065 2.41 -5.038" text-geometry="size:0.27;value:Happy Birthday Dear Emily!;font:https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json" rotation="0 18 0" height="0.06"></a-entity>
+            
+		</a-scene>
+	</body>
+</html>
